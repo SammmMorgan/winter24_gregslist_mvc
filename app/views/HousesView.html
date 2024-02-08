@@ -27,40 +27,48 @@
 <div class="container">
     <section class="row bg-white shadow">
         <div class="col-12">
-            <form>
+            <form onsubmit="app.HousesController.makeHouseListing()">
+
                 <div class="mb-3">
                     <label for="housetital" class="form-label">Title of House</label>
                     <div id="housetitaldescrip" class="form-text">Give us a general term for your house.</div>
-                    <input maxlength="20" minlength="3" type="text" required class="form-control" id="housetital"
-                        aria-describedby="housetitaldescrip">
+                    <input name="tital" maxlength="20" minlength="3" type="text" required class="form-control"
+                        id="housetital" aria-describedby="housetitaldescrip">
                 </div>
+
                 <div class="mb-3">
                     <label for="housedescrip" class="form-label">Description of House </label>
                     <div id="housedescrip" class="form-text">Give us an overall description of your house.</div>
-                    <textarea minlength="25" maxlength="1000" required class="form-control"
+                    <textarea name="description" minlength="25" maxlength="1000" required class="form-control"
                         id="housedescrip"></textarea>
                 </div>
+
                 <div class="mb-3">
                     <label for="housebedroomdescrip" class="form-label">Bedrooms </label
                         aria-describedby="houseroomdescrip">
-                    <input min="1" max="1000" type="number" class="form-control" id="housebedrooms">
+                    <input name="bedrooms" min="1" max="1000" type="number" class="form-control" id="housebedrooms">
                     <div id="houseroomdescrip" class="form-text">You can also list this in your description.</div>
                 </div>
                 <div class="mb-3">
                     <label for="housebathroomdescrip" class="form-label">Bathrooms </label
                         aria-describedby="houseroomdescrip">
-                    <input min="1" max="1000" type="number" class="form-control" id="housebathrooms">
+                    <input name="bathrooms" min="1" max="1000" type="number" class="form-control" id="housebathrooms">
                     <div id="houseroomdescrip" class="form-text">You can also list this in your description.</div>
                 </div>
                 <div class="mb-3">
                     <label for="housefootagedescrip" class="form-label">Square Footage </label
                         aria-describedby="houseroomdescrip">
-                    <input min="1" max="1000000" type="number" class="form-control" id="housefootagedescrip">
+                    <input name="sqft" min="1" max="1000000" type="number" class="form-control"
+                        id="housefootagedescrip">
                     <div id="houseroomdescrip" class="form-text">You can also list this in your description.</div>
                 </div>
                 <div class="mb-3">
+                    <label for="imgUrl" class="form-label">ImgUrl </label>
+                    <input name="imgUrl" required type="url" class="form-control" maxlength="500">
+                </div>
+                <div class="mb-3">
                     <label for="pricedescrip" class="form-label">Price </label aria-describedby="pricedescrip">
-                    <input type="number" class="form-control" min="0" max="1000000000">
+                    <input name="imgUrl" type="number" class="form-control" min="0" max="1000000000">
                 </div>
 
                 <button type="submit" class="btn btn-primary">Submit</button>

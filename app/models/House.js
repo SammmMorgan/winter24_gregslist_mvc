@@ -24,8 +24,8 @@ export class House {
         <p class="card-text">Description: ${this.description}</p>
         <p class="card-text">Bedrooms: ${this.bedrooms}</p>
         <p class="card-text">Bathrooms: ${this.bathrooms}</p>
-        <p class="card-text">Square Footage: ${this.sqft} </p>
-        <p class="card-text">Price: ${this.price} </p>
+        <p class="card-text">Square Footage: ${this.sqft} sqft </p>
+        <p class="card-text">Price: $${this.price} </p>
     </div>
 </div>
 </div>`

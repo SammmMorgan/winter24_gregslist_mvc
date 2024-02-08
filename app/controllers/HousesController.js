@@ -1,6 +1,7 @@
 import { AppState } from "../AppState.js";
 import { House } from "../models/House.js";
-import { HousesService } from "../services/HousesService.js";
+import { houseService } from "../services/HousesService.js";
+import { getFormData } from "../utils/FormHandler.js";
 import { setHTML } from "../utils/Writer.js";
 
 function _drawHouses() {
@@ -14,4 +15,24 @@ export class HousesController {
     constructor() {
         _drawHouses()
     }
+
+    makeHouseListing() {
+        try {
+            event.preventDefault()
+            const form = event.target
+
+            console.log('reading event', form)
+
+            let houseFormData = getFormData(form)
+
+            console.log('form data object', houseFormData)
+
+            houseService.makeHouseListing(houseFormData)
+
+        }
+        catch {
+            throw console.error(`somesthing's gone wrong with the form`);
+        }
+    }
+
 }
